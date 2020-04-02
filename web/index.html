@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible" />
+    <meta name="description" content="A new Flutter project." />
+
+    <!-- iOS meta tags & icons -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-title" content="flutter_web_component" />
+    <link rel="apple-touch-icon" href="icons/Icon-192.png" />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="favicon.png" />
+
+    <title>Flutter Web Component</title>
+    <link rel="manifest" href="manifest.json" />
+    <style>
+      #app-container {
+        height: 800px;
+        width: 600px;
+        background-color: grey;
+        margin: 0 auto;
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>This is my website!</h1>
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", function() {
+          navigator.serviceWorker.register("flutter_service_worker.js");
+        });
+      }
+    </script>
+    <flutter-app width="600px" height="800px"></flutter-app>
+    <script src="flutter-app.js"></script>
+    <br>
+    <footer>
+      <span>Here is my footer!</span>
+    </footer>
+  </body>
+</html>
+
+
